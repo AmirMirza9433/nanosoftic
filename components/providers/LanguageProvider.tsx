@@ -14,7 +14,7 @@ import ur from "@/lib/i18n/ur";
 const dictionaries = { en, ur };
 
 type Locale = keyof typeof dictionaries;
-type Dictionary = typeof en;
+type Dictionary = (typeof dictionaries)[Locale];
 
 type LanguageContextValue = {
   locale: Locale;
