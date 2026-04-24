@@ -7,7 +7,7 @@ import { useLanguage } from "@/components/providers/LanguageProvider";
 const phoneRaw = "+92 300 1234567";
 const phoneHref = "tel:+923001234567";
 const whatsappHref = "https://wa.me/923001234567";
-const email = "contact@tutorsoftic.com";
+const email = "contact@nanosoftic.com";
 
 type ContactAction = {
   id: "whatsapp" | "call" | "email";

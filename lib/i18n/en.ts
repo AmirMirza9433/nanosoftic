@@ -45,6 +45,8 @@ const en = {
     mobileCategory: "Mobile Development",
     backendCategory: "Backend Development",
     designCategory: "Graphics Design",
+    cmsCategory: "CMS & Website Builders",
+    officeCategory: "Office Management & Computer Coure",
     studentsTrained: "Students Trained",
     projectsDelivered: "Projects Delivered",
     corporateClients: "Corporate Clients",
@@ -110,7 +112,7 @@ const en = {
     titleHighlight: "Are",
     missionTitle: "Our Mission",
     missionParagraphOne:
-      "TutorSoftic is a hybrid tech hub providing professional IT training and modern software solutions. We specialize in transforming traditional shops and restaurants into digital automated businesses.",
+      "NanoSoftic is a hybrid tech hub providing professional IT training and modern software solutions. We specialize in transforming traditional shops and restaurants into digital automated businesses.",
     missionParagraphTwo:
       "Our team of experienced developers and trainers is dedicated to empowering individuals and businesses with the latest technology skills and solutions. Whether you want to learn web development or need a custom software solution, we are here to help you succeed.",
     chooseTitle: "Why Choose Us",
@@ -171,6 +173,12 @@ const en = {
       designTitle: "Graphics Design",
       designDescription:
         "Create stunning visuals and designs. Learn industry-standard tools for UI/UX, branding, and print media.",
+      cmsTitle: "CMS & Website Builders",
+      cmsDescription:
+        "Build and manage professional websites without heavy coding. Learn practical workflows for freelancing and business websites.",
+      officeTitle: "Office Management & Computer Coure",
+      officeDescription:
+        "Develop practical office and administration skills for daily business operations, documentation, reporting, and team coordination.",
     },
   },
   contactPage: {

@@ -123,6 +123,50 @@ export default function CoursesPage() {
         </svg>
       ),
     },
+    {
+      category: dictionary.coursesPage.categories.cmsTitle,
+      description: dictionary.coursesPage.categories.cmsDescription,
+      courses: [
+        { name: "WordPress", level: levels.beginner, duration: week(4) },
+        { name: "Wix", level: levels.beginner, duration: week(3) },
+        { name: "Elementor", level: levels.intermediate, duration: week(3) },
+        { name: "WooCommerce", level: levels.intermediate, duration: week(4) },
+      ],
+      color: "from-emerald-500 to-cyan-500",
+      icon: (
+        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9.75 3h4.5A2.25 2.25 0 0116.5 5.25v1.5A2.25 2.25 0 0114.25 9h-4.5A2.25 2.25 0 017.5 6.75v-1.5A2.25 2.25 0 019.75 3zM6 13.5h12M6 18h12"
+          />
+        </svg>
+      ),
+    },
+    {
+      category: dictionary.coursesPage.categories.officeTitle,
+      description: dictionary.coursesPage.categories.officeDescription,
+      courses: [
+        { name: "MS Word", level: levels.beginner, duration: week(3) },
+        { name: "MS Excel", level: levels.beginner, duration: week(5) },
+        { name: "MS PowerPoint", level: levels.beginner, duration: week(3) },
+        { name: "Email Writing", level: levels.beginner, duration: week(2) },
+        { name: "Documentation", level: levels.intermediate, duration: week(3) },
+        { name: "Reporting", level: levels.intermediate, duration: week(3) },
+      ],
+      color: "from-amber-500 to-orange-500",
+      icon: (
+        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+          />
+        </svg>
+      ),
+    },
   ];
 
   return (

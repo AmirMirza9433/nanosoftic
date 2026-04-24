@@ -188,7 +188,7 @@ export default function ContactPage() {
                     <div>
                       <p className="font-medium">{dictionary.contactPage.emailLabel}</p>
                       <p className="text-foreground-muted text-sm">
-                        contact@tutorsoftic.com
+                        contact@nanosoftic.com
                       </p>
                     </div>
                   </div>
@@ -222,12 +222,12 @@ export default function ContactPage() {
                 <div className="border-b border-[var(--surface-border-subtle)] p-5">
                   <h3 className="text-xl font-semibold">Our Location</h3>
                   <p className="mt-1 text-sm text-foreground-muted">
-                    Visit TutorSoftic at Alipur Chatha, Punjab.
+                    Visit NanoSoftic at Alipur Chatha, Punjab.
                   </p>
                 </div>
                 <div className="relative h-[310px]">
                   <iframe
-                    title="TutorSoftic location on Google Maps"
+                    title="NanoSoftic location on Google Maps"
                     src="https://maps.google.com/maps?q=32.2687542,73.812372&z=16&output=embed"
                     className={`h-full w-full border-0 transition duration-300 ${
                       isDarkTheme

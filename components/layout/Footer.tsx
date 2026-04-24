@@ -20,9 +20,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-cyan to-accent-blue flex items-center justify-center">
-                <span className="text-white font-bold text-lg">TS</span>
+                <span className="text-white font-bold text-lg">NS</span>
               </div>
-              <span className="text-xl font-bold text-gradient">TutorSoftic</span>
+              <span className="text-xl font-bold text-gradient">NanoSoftic</span>
             </div>
             <p className="text-foreground-muted text-sm">
               {dictionary.footer.tagline}
@@ -64,7 +64,7 @@ export default function Footer() {
 
         <div className="border-t border-[var(--surface-border-subtle)] mt-8 pt-8 text-center">
           <p className="text-foreground-muted text-xs">
-            &copy; {new Date().getFullYear()} TutorSoftic. {dictionary.footer.rights}
+            &copy; {new Date().getFullYear()} NanoSoftic. {dictionary.footer.rights}
           </p>
         </div>
       </div>

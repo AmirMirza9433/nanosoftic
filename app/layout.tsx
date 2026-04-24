@@ -13,15 +13,42 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "TutorSoftic - Best IT Academy & Software House in Alipur Chatha",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://nanosoftic.vercel.app"),
+  title: "NanoSoftic - IT Academy & Software House in Alipur Chatha",
   description:
-    "Expert in Next.js & Mobile Apps. Professional IT training and modern software solutions in Alipur Chatha, Punjab, Pakistan.",
+    "NanoSoftic provides professional IT training, web and mobile development, and custom software solutions in Alipur Chatha, Punjab, Pakistan.",
   keywords: [
+    "NanoSoftic",
+    "nanosoftic",
+    "Nano Softic",
     "Software House Alipur Chatha",
     "IT Training Alipur Chatha",
+    "NanoSoftic Alipur Chatha",
+    "NanoSoftic Pakistan",
     "Next.js Developer Pakistan",
     "Custom POS Software Pakistan",
   ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "NanoSoftic - IT Academy & Software House in Alipur Chatha",
+    description:
+      "Professional IT training and modern software solutions by NanoSoftic in Alipur Chatha, Punjab, Pakistan.",
+    url: "/",
+    siteName: "NanoSoftic",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NanoSoftic - IT Academy & Software House",
+    description:
+      "Professional IT training and modern software solutions by NanoSoftic in Alipur Chatha.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -31,7 +58,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
-      <body className="min-h-screen flex flex-col bg-background text-foreground">
+      <body
+        suppressHydrationWarning
+        className="min-h-screen flex flex-col bg-background text-foreground"
+      >
         <LanguageProvider>
           <Navbar />
           <PageTransition>

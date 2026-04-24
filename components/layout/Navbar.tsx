@@ -44,9 +44,9 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-cyan to-accent-blue flex items-center justify-center">
-              <span className="text-white font-bold text-lg">TS</span>
+              <span className="text-white font-bold text-lg">NS</span>
             </div>
-            <span className="text-xl font-bold text-gradient">TutorSoftic</span>
+            <span className="text-xl font-bold text-gradient">NanoSoftic</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">

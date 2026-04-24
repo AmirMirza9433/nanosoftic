@@ -81,6 +81,23 @@ export default function CoursesList() {
       items: ["Figma", "Canva", "Photoshop", "CorelDRAW", "InPage"],
       color: "from-pink-500 to-red-500",
     },
+    {
+      category: dictionary.courses.cmsCategory,
+      items: ["WordPress", "Wix", "Elementor", "WooCommerce"],
+      color: "from-emerald-500 to-cyan-500",
+    },
+    {
+      category: dictionary.courses.officeCategory,
+      items: [
+        "MS Word",
+        "MS Excel",
+        "MS PowerPoint",
+        "Email Writing",
+        "Documentation",
+        "Reporting",
+      ],
+      color: "from-amber-500 to-orange-500",
+    },
   ];
   const stats = [
     { value: 500, suffix: "+", label: dictionary.courses.studentsTrained },
