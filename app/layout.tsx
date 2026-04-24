@@ -12,48 +12,96 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://nanosoftic.vercel.app";
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://nanosoftic.vercel.app"),
-  title: "NanoSoftic - IT Academy & Software House in Alipur Chatha",
+  metadataBase: new URL(siteUrl),
+
+  title: {
+    default: "NanoSoftic — IT Academy & Software House | Alipur Chatha, Pakistan",
+    template: "%s | NanoSoftic",
+  },
+
   description:
-    "NanoSoftic provides professional IT training, web and mobile development, and custom software solutions in Alipur Chatha, Punjab, Pakistan.",
+    "NanoSoftic is a professional IT Academy and Software House located in Alipur Chatha, Punjab, Pakistan. NanoSoftic offers web development, mobile app development, custom software solutions, and IT training courses.",
+
   keywords: [
     "NanoSoftic",
     "nanosoftic",
     "Nano Softic",
-    "Software House Alipur Chatha",
-    "IT Training Alipur Chatha",
+    "NanoSoftic IT Academy",
+    "NanoSoftic Software House",
     "NanoSoftic Alipur Chatha",
     "NanoSoftic Pakistan",
+    "nanosoftic.vercel.app",
+    "IT Academy Alipur Chatha",
+    "Software House Alipur Chatha",
+    "IT Training Alipur Chatha",
+    "Web Development Alipur Chatha",
+    "IT Training Gujranwala",
+    "Software House Gujranwala",
+    "Web Development Pakistan",
+    "Mobile App Development Pakistan",
     "Next.js Developer Pakistan",
+    "React Developer Pakistan",
     "Custom POS Software Pakistan",
+    "IT Courses Punjab Pakistan",
   ],
+
+  authors: [{ name: "NanoSoftic", url: siteUrl }],
+  creator: "NanoSoftic",
+  publisher: "NanoSoftic",
+
   alternates: {
-    canonical: "/",
+    canonical: siteUrl,
   },
+
   openGraph: {
-    title: "NanoSoftic - IT Academy & Software House in Alipur Chatha",
+    title: "NanoSoftic — IT Academy & Software House | Alipur Chatha",
     description:
-      "Professional IT training and modern software solutions by NanoSoftic in Alipur Chatha, Punjab, Pakistan.",
-    url: "/",
+      "NanoSoftic is a professional IT Academy and Software House in Alipur Chatha, Punjab, Pakistan. We offer web development, mobile apps, custom software, and IT training.",
+    url: siteUrl,
     siteName: "NanoSoftic",
     type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: `${siteUrl}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: "NanoSoftic — IT Academy & Software House Alipur Chatha",
+      },
+    ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "NanoSoftic - IT Academy & Software House",
+    title: "NanoSoftic — IT Academy & Software House",
     description:
-      "Professional IT training and modern software solutions by NanoSoftic in Alipur Chatha.",
+      "Professional IT training and modern software solutions by NanoSoftic in Alipur Chatha, Punjab, Pakistan.",
+    images: [`${siteUrl}/og-image.png`],
   },
+
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
+
   verification: {
     google:
       process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ??
       "Ln6ws5E_9zKQagr3cmwwSSFyRzyojXjERC12uBfZhCo",
   },
+
+  category: "technology",
 };
 
 export default function RootLayout({
@@ -61,20 +109,62 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://nanosoftic.vercel.app";
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     name: "NanoSoftic",
+    alternateName: ["Nano Softic", "nanosoftic"],
     url: siteUrl,
     logo: `${siteUrl}/favicon.ico`,
+    image: `${siteUrl}/og-image.png`,
     description:
-      "NanoSoftic provides professional IT training, web and mobile development, and custom software solutions in Alipur Chatha, Punjab, Pakistan.",
+      "NanoSoftic is a professional IT Academy and Software House in Alipur Chatha, Punjab, Pakistan. We provide IT training, web development, mobile app development, and custom software solutions.",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Opposite side Children Park",
       addressLocality: "Alipur Chatha",
       addressRegion: "Punjab",
       addressCountry: "PK",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      email: "contact@nanosoftic.com",
+      availableLanguage: ["English", "Urdu"],
+    },
+    sameAs: [],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "IT Training & Software Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Course",
+            name: "Web Development Course",
+            description:
+              "Learn HTML, CSS, JavaScript, React, Next.js, TypeScript and Angular.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Course",
+            name: "Mobile App Development Course",
+            description:
+              "Learn React Native, Ionic, Redux Toolkit and Firebase.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Custom Software Development",
+            description:
+              "Tailored software solutions including POS systems, order management, and web applications.",
+          },
+        },
+      ],
     },
   };
 
