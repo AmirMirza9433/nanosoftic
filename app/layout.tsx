@@ -49,6 +49,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
 };
 
 export default function RootLayout({
@@ -56,12 +59,33 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://nanosoftic.vercel.app";
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    name: "NanoSoftic",
+    url: siteUrl,
+    logo: `${siteUrl}/favicon.ico`,
+    description:
+      "NanoSoftic provides professional IT training, web and mobile development, and custom software solutions in Alipur Chatha, Punjab, Pakistan.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Alipur Chatha",
+      addressRegion: "Punjab",
+      addressCountry: "PK",
+    },
+  };
+
   return (
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
       <body
         suppressHydrationWarning
         className="min-h-screen flex flex-col bg-background text-foreground"
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         <LanguageProvider>
           <Navbar />
           <PageTransition>
