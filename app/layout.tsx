@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import PageTransition from "@/components/ui/PageTransition";
 import { LanguageProvider } from "@/components/providers/LanguageProvider";
 import FloatingContact from "@/components/ui/FloatingContact";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -94,6 +95,7 @@ export default function RootLayout({
           <Footer />
           <FloatingContact />
         </LanguageProvider>
+        <Analytics />
       </body>
     </html>
   );
