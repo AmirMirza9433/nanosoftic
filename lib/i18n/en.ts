@@ -206,7 +206,7 @@ const en = {
     message: "Message",
     yourName: "Your name",
     yourEmail: "your@email.com",
-    yourPhone: "+92 300 1234567",
+    yourPhone: "03287872532",
     selectSubject: "Select a subject",
     trainingInquiry: "IT Training Inquiry",
     softwareDevelopment: "Software Development",

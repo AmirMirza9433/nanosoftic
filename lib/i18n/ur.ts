@@ -206,7 +206,7 @@ const ur = {
     message: "پیغام",
     yourName: "آپ کا نام",
     yourEmail: "your@email.com",
-    yourPhone: "+92 300 1234567",
+    yourPhone: "03287872532",
     selectSubject: "موضوع منتخب کریں",
     trainingInquiry: "آئی ٹی ٹریننگ معلومات",
     softwareDevelopment: "سافٹ ویئر ڈیویلپمنٹ",

@@ -17,6 +17,11 @@ const siteUrl =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  icons: {
+    icon: "/fev.png",
+    shortcut: "/fev.png",
+    apple: "/fev.png",
+  },
 
   title: {
     default: "NanoSoftic — IT Academy & Software House | Alipur Chatha, Pakistan",
@@ -67,9 +72,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: `${siteUrl}/og-image.png`,
-        width: 1200,
-        height: 630,
+        url: `${siteUrl}/logo.png`,
+        width: 1024,
+        height: 1024,
         alt: "NanoSoftic — IT Academy & Software House Alipur Chatha",
       },
     ],
@@ -80,7 +85,7 @@ export const metadata: Metadata = {
     title: "NanoSoftic — IT Academy & Software House",
     description:
       "Professional IT training and modern software solutions by NanoSoftic in Alipur Chatha, Punjab, Pakistan.",
-    images: [`${siteUrl}/og-image.png`],
+    images: [`${siteUrl}/logo.png`],
   },
 
   robots: {
@@ -111,12 +116,16 @@ export default function RootLayout({
 }>) {
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
+
+    // ✅ FIX 1: "Organization" use kiya — Google isko brand ki tarah treat karta hai
+    // Pehle "EducationalOrganization" tha jo sirf ek school/college ki tarah dikhata tha
+    "@type": "Organization",
+
     name: "NanoSoftic",
     alternateName: ["Nano Softic", "nanosoftic"],
     url: siteUrl,
-    logo: `${siteUrl}/favicon.ico`,
-    image: `${siteUrl}/og-image.png`,
+    logo: `${siteUrl}/logo.png`,
+    image: `${siteUrl}/logo.png`,
     description:
       "NanoSoftic is a professional IT Academy and Software House in Alipur Chatha, Punjab, Pakistan. We provide IT training, web development, mobile app development, and custom software solutions.",
     address: {
@@ -129,10 +138,20 @@ export default function RootLayout({
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",
-      email: "contact@nanosoftic.com",
+      email: "nanosoftic@gmail.com",
       availableLanguage: ["English", "Urdu"],
     },
-    sameAs: [],
+
+    // ✅ FIX 2: sameAs mein social media links add karein
+    // Google yahan se confirm karta hai ke "NanoSoftic" ek real brand hai
+    // Jab aap Facebook/Instagram page banayein to links yahan add karein:
+    sameAs: [
+      "https://www.facebook.com/profile.php?id=61589113948095",
+      "https://www.instagram.com/nanosoftic/",
+      "https://www.linkedin.com/in/nano-softic-a46453407/",
+      "https://x.com/NanoSoftic",
+    ],
+
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "IT Training & Software Services",

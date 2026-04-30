@@ -4,10 +4,10 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useState } from "react";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 
-const phoneRaw = "+92 300 1234567";
-const phoneHref = "tel:+923001234567";
-const whatsappHref = "https://wa.me/923001234567";
-const email = "contact@nanosoftic.com";
+const phoneRaw = "03287872532";
+const phoneHref = "tel:+923287872532";
+const whatsappHref = "https://wa.me/923287872532";
+const email = "nanosoftic@gmail.com";
 
 type ContactAction = {
   id: "whatsapp" | "call" | "email";

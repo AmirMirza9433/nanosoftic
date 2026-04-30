@@ -100,9 +100,9 @@ export default function CoursesList() {
     },
   ];
   const stats = [
-    { value: 500, suffix: "+", label: dictionary.courses.studentsTrained },
-    { value: 150, suffix: "+", label: dictionary.courses.projectsDelivered },
-    { value: 50, suffix: "+", label: dictionary.courses.corporateClients },
+    { value: 45, suffix: "+", label: dictionary.courses.studentsTrained },
+    { value: 35, suffix: "+", label: dictionary.courses.projectsDelivered },
+    { value: 10, suffix: "+", label: dictionary.courses.corporateClients },
     { value: 5, suffix: "+", label: dictionary.courses.yearsExperience },
   ];
 
